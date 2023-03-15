@@ -9,9 +9,13 @@ const quizTimer = (dismiss) => {
   timer = setInterval(() => {
     let countHtml = document.querySelector("#count");
     let covtMin = Math.floor(count / 60);
+    console.log('covtMin---',covtMin);
     let mod = count % 60;
+    console.log('covtMod---',mod);
     let min = covtMin.toString().length === 1 ? `0${covtMin}` : covtMin;
+    console.log('min---',min);
     let countSec = mod.toString().length === 1 ? `0${mod}` : mod;
+    console.log('countSec---',countSec);
 
     countHtml.innerHTML = `${
       min + ":" + countSec

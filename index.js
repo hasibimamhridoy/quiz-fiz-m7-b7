@@ -78,7 +78,7 @@ const displayQuiz = (data) => {
 
 
 document.querySelector("#submit").addEventListener("click", () => {
-  console.log('Clicked');
+
   if (answers.length < 6) {
     return;
   }
