@@ -197,13 +197,46 @@
             class="p-5 font-light border border-t-0 border-gray-200 dark:border-gray-700"
           >
             <p class="mb-2 text-gray-500 dark:text-gray-400">
-              The main difference is that the core components from Flowbite are
-              open source under the MIT license, whereas Tailwind UI is a paid
-              product. Another difference is that Flowbite relies on smaller and
-              standalone components, whereas Tailwind UI offers sections of
-              pages.
+                The event loop is a fundamental part of the JavaScript runtime that allows for non-blocking operations. <br><br>
+                The event loop is a fundamental part of most modern programming languages and frameworks, including JavaScript and Node.js. Its primary function is to manage the execution of asynchronous code by monitoring a queue of events, and handling them in a non-blocking way.
             </p>
             
+            <p class="text-purple-600">Here's how the event loop works: </p>
+            <ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+                <li>
+                    The event loop starts when our application starts running.
+                </li>
+                <li>
+                    When our application encounters an asynchronous operation, such as a network request or a timer, it initiates that operation and then moves on to the next task.
+                </li>
+                <li>
+                    While the asynchronous operation is happening in the background, our application can continue to execute other tasks in the meantime.
+                </li>
+                <li>
+                    Once the asynchronous operation is complete, it adds the corresponding task to the task queue.
+                </li>
+                <li>
+                    The event loop continuously checks if there are any pending tasks in the task queue.
+                </li>
+                <li>
+                    If there are, it takes the first task in the queue and executes it.
+                </li>
+                <li>
+                    If the task is synchronous, it runs immediately and the event loop moves on to the next task.
+                </li>
+                <li>
+                    If the task is asynchronous, such as a callback function or a Promise, it initiates the operation associated with that task and moves on to the next task.
+                </li>
+                <li>
+                    Evenet loop monitoring when the call stack is empty.Whan the all synchoronus work is finished then the call stack is empty. Thats the this event loop pick the work in task queue and it send to call stack. Call stack run the work then again it is empty.
+                    The event loop again pick a second work and send it call stack . And this loop will continue until the task quequ is empty .
+                </li>
+
+                <br>
+                This the image explae how event loop is working:
+
+                <img src="event_loop.png" alt="">
+                
             
           </div>
         </div>
